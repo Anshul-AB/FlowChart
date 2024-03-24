@@ -8,6 +8,12 @@ This project is a frontend application for creating and visualizing flowcharts. 
 - **Node Deletion**: Remove nodes from the flowchart by clicking on the delete button associated with each node.
 - **Node Data Display**: Click on a node to view additional data associated with it in a popup.
 
+## Screenshot
+
+![Flowchart Screenshot](FlowchartScreenshot.png)
+![Flowchart Screenshot](FlowchartScreenshot2.png)
+
+
 ## Installation
 
 To run this project locally, follow these steps:
