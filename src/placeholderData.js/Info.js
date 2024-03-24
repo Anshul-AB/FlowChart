@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Label } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const Info = () => {
   // Dummy data for the pie chart
@@ -13,17 +13,17 @@ const Info = () => {
   return (
     <div className="info-chart">
       <h4>Pie Chart</h4>
-      <ResponsiveContainer width="100%" height={160}>
+      <ResponsiveContainer width="100%" height={180}>
         <PieChart>
           <Pie
             data={pieChartData}
             cx="50%"
             cy="50%"
-            innerRadius={60}
-            outerRadius={80}
+            innerRadius={40}
+            outerRadius={60}
             fill="#8884d8"
             dataKey="value"
-            Label
+            label="name"
           >
             {pieChartData.map((entry, index) => (
               <Cell
@@ -31,7 +31,6 @@ const Info = () => {
                 fill={`#${Math.floor(Math.random() * 16777215).toString(16)}`}
               />
             ))}
-            <Label valueKey={pieChartData.name} position="inside" />
           </Pie>
         </PieChart>
       </ResponsiveContainer>

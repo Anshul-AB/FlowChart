@@ -16,6 +16,7 @@ export const initialNodes = [
     ...nodeDefaults,
     position: { x: -300, y: 250 },
     data: { label: "O" },
+    className:"endNode"
   },
   {
     id: "Col-1.1",
@@ -169,5 +170,6 @@ export const initialNodes = [
     ...nodeDefaults,
     position: { x: 1200, y: -75 },
     data: { label: "O" },
+    className:'endNode'
   },
 ];

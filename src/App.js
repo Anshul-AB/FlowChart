@@ -67,9 +67,9 @@ function App() {
       style: {
         fontSize: 20,
         fontWeight: 500,
-        backgroundColor: 'silver'
+        backgroundColor: "silver",
       },
-      data: { label: `${newNodeAdded.label}` , info: "No Data Available"},
+      data: { label: `${newNodeAdded.label}`, info: "No Data Available" },
       position: {
         x: 600,
         y: 0 + (nodes.length + 1) * 10,
@@ -124,13 +124,9 @@ function App() {
 
   return (
     <ReactFlowProvider>
-      <div
-        style={{ width: "100vw", height: "100vh" }}
-        onClick={onClose}
-      >
+      <div style={{ width: "100vw", height: "100vh" }} onClick={onClose}>
         {/* buttons to add or edit node */}
         <div className="container">
-
           {/* Header */}
           <div className="addDiv">
             <input
@@ -144,11 +140,15 @@ function App() {
             <button className="addNodeBtn" onClick={onAdd}>
               Add node
             </button>
-            <p> ** To Delete a node, Select the node and press 'Backspace'</p>
-            <p> ** Click on Node to see the Data</p>
+            <p style={{ color: "lightgrey", fontSize: "12px" }}>
+              {" "}
+              To Delete a node, Select the node and press 'Backspace'. Click on the 
+              Node to see the Data.
+            </p>
           </div>
-          
         </div>
+
+        {/* Flowchart */}
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -162,6 +162,7 @@ function App() {
             setSelectedNodeId(node.id);
             onClick(e, node.id);
           }}
+          className="flowchart"
         ></ReactFlow>
 
         {/* Data on nodeclick */}
